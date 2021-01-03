@@ -15,7 +15,8 @@ const navbarHeight = navbar.clientHeight;
 const sectionBlock = document.querySelectorAll('.block');
 
 
-const navbarItem = navbar.querySelectorAll('.navbar li');
+
+const navbarItem = navbar.querySelectorAll('.navbar li a');
 const navToggle = document.querySelector('.navbar .navbar-toggler');
 
 navToggle.addEventListener('click', function(){
@@ -41,6 +42,8 @@ navbarItem.forEach(item =>{
 
             navToggle.classList.remove('active')
         }
+
+        
     })
 })
 
@@ -48,20 +51,6 @@ navbarItem.forEach(item =>{
 
 
 
-
-
-
-
-
-
-// Set About Values
-const about = document.querySelector('.about');
-const aboutPartLeft = about.querySelector('.part-left');
-const aboutPartRight = about.querySelector('.part-right');
-
-
-const menu = document.querySelector('.menu');
-const menuOffsetTop = menu.getBoundingClientRect().top;
 
 
 // Window Scroll Event
@@ -116,6 +105,8 @@ const ourTeam = document.querySelector('.our-team');
 const teamContent = ourTeam.querySelector('.team-content');
 const ourTeamTitle = ourTeam.querySelector('.title');
 const teamContentOffset = teamContent.getBoundingClientRect().top;
+
+
 window.addEventListener('scroll', reaval)
 
 function reaval(){
@@ -126,7 +117,7 @@ function reaval(){
     block.forEach(item =>{
 
         let blockTop = item.getBoundingClientRect().top;
-        let blockPixel = 400;
+        let blockPixel = 200;
 
         if (blockTop < windowHeight - blockPixel) {
 
